@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    h1, h2, h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .nav-link {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .collection-card {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #fff;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .collection-card:hover {
+      transform: translateY(-5px);
+    }
+    .collection-card img {
+      width: 100%;
+      height: 550px;
+      object-fit: contain;
+      background: #fff;
+      padding: 10px;
+    }
+
+    .collection-card h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .collection-card p strong {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .btn {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+
+    .filter-btn.active {
+      background-color: black !important;
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="LOGO" class="img-fluid" style="max-height:70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="stylists.html">Stylists</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Collections</a></li>
+          <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-dark text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Our Collections</h1>
+      <p class="lead mb-0">Explore Summer, Winter & Wedding Wear From Top Designers</p>
+    </div>
+  </header>
+
+  <!-- COLLECTIONS -->
+  <div class="container py-5">
+    <!-- FILTER BUTTONS -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-dark filter-btn active" onclick="filterSelection('all')">All</button>
+      <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('summer')">Summer</button>
+      <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('winter')">Winter</button>
+      <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('wedding')">Wedding</button>
+    </div>
+
+    <div class="row g-4" id="collectionGrid">
+
+      <!-- SUMMER COLLECTIONS -->
+      <div class="col-12 col-sm-6 col-md-4 filter-item summer">
+        <div class="collection-card">
+          <img src="images/aghanoor summer.webp" alt="Agha Noor Summer" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>Agha Noor – Summer</h5>
+            <p>Pret / Seasonal Wear</p>
+            <p><strong>PKR 5,000 – 15,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/923302720178" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://pk.aghanoorofficial.com/search?q=summer&options%5Bprefix%5D=last&type=product&id=45688808898816&quantity=1" class="btn btn-outline-dark btn-sm" target="_blank">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 filter-item summer">
+        <div class="collection-card">
+          <img src="images/maria b summer.webp" alt="Maria B Summer" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>Maria B – Summer</h5>
+            <p>Luxury Pret</p>
+            <p><strong>PKR 6,000 – 18,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/923211224333" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://www.mariab.pk/search?type=product%2Carticle%2Cpage%2Ccollection&options[prefix]=last&q=summer*" class="btn btn-outline-dark btn-sm" target="_blank">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 filter-item summer">
+        <div class="collection-card">
+          <img src="images/hsy summer.jpg" alt="HSY Summer" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>HSY – Summer</h5>
+            <p>Exclusive Summer Wear</p>
+            <p><strong>PKR 8,000 – 25,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/+923331213279" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://luxe.theworldofhsy.com/drops/hsy--summer-edit?utm_source=website&utm_medium=crossbrand_referral&utm_campaign=hsy" class="btn btn-outline-dark btn-sm" target="_blank">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WINTER COLLECTIONS -->
+      <div class="col-12 col-sm-6 col-md-4 filter-item winter">
+        <div class="collection-card">
+          <img src="images/aghanoor winter.webp" alt="Agha Noor Winter" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>Agha Noor – Winter</h5>
+            <p>Warm Pret Collection</p>
+            <p><strong>PKR 6,000 – 20,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/923302720178" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://pk.aghanoorofficial.com/search?q=winter&options%5Bprefix%5D=last&type=product" class="btn btn-outline-dark btn-sm" target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 filter-item winter">
+        <div class="collection-card">
+          <img src="images/maria b winter.webp" alt="Maria B Winter" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>Maria B – Winter</h5>
+            <p>Luxury Winter Wear</p>
+            <p><strong>PKR 7,000 – 22,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/923211224333" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://www.mariab.pk/collections/prefall" class="btn btn-outline-dark btn-sm" target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 filter-item winter">
+        <div class="collection-card">
+          <img src="images/hsy winter.webp" alt="HSY Winter" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>HSY – Winter</h5>
+            <p>Classic Winter Styles</p>
+            <p><strong>PKR 10,000 – 30,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/+923331213279" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://luxe.theworldofhsy.com/all-products?sort_by=BEST_SELLING" class="btn btn-outline-dark btn-sm" target="_blank">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEDDING COLLECTIONS -->
+      <div class="col-12 col-sm-6 col-md-4 filter-item wedding">
+        <div class="collection-card">
+          <img src="images/aghanoor wedding.webp" alt="Agha Noor Wedding" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>Agha Noor – Wedding</h5>
+            <p>Formal Wedding Wear</p>
+            <p><strong>PKR 15,000 – 45,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/923302720178" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://bridal.aghanoorofficial.com/" class="btn btn-outline-dark btn-sm" target="_blank">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 filter-item wedding">
+        <div class="collection-card">
+          <img src="images/maria b wedding.webp" alt="Maria B Wedding" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>Maria B – Wedding</h5>
+            <p>Luxury Bridal</p>
+            <p><strong>PKR 20,000 – 60,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/923211224333" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://www.mariab.pk/pages/wedding-wear" class="btn btn-outline-dark btn-sm" target="_blank">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 filter-item wedding">
+        <div class="collection-card">
+          <img src="images/Couture Collection hsy.webp" alt="HSY Wedding" class="img-fluid">
+          <div class="card-body text-center p-3 flex-grow-1 d-flex flex-column">
+            <h5>HSY – Wedding</h5>
+            <p>Bridal & Couture</p>
+            <p><strong>PKR 25,000 – 100,000</strong></p>
+            <div class="mt-auto d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://wa.me/+923331213279" class="btn btn-success btn-sm" target="_blank">WhatsApp</a>
+              <a href="https://theworldofhsy.com/collections/pakistani-bridal-dresses?srsltid=AfmBOoqoHcEbDeB7rBuPsvkd1xaltQ_zJn7liu6VkZ1y5_5ISUKcYK_6" class="btn btn-outline-dark btn-sm" target="_blank">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- FOOTER -->
+<footer class="bg-light py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- About Us -->
+      <div class="col-12 col-md-3 mb-3">
+        <h5>About Us</h5>
+        <p>We are committed to providing the best fashion and style services. Our team of professional stylists offers the latest trends and timeless classics.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-3 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
+          <li><a href="stylists.html" class="text-decoration-none text-dark">Stylists</a></li>
+          <li><a href="collection.html" class="text-decoration-none text-dark">Collection</a></li>
+          <li><a href="compare.html" class="text-decoration-none text-dark">Compare</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="col-6 col-md-3 mb-3">
+        <h5>Contact Us</h5>
+        <ul class="list-unstyled">
+          <li>Email: <a href="mailto:info@example.com" class="text-decoration-none text-dark">wajeehhussain15@gmail.com</a></li>
+          <li>Phone: +92 3203033890</li>
+          <li>North Nazimabad Block B </li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+<!-- Follow Us -->
+<div class="col-12 col-md-3 mb-3">
+  <h5>Follow Us</h5>
+  <ul class="list-unstyled">
+    <li>
+      <a href="https://www.facebook.com/" class="text-decoration-none text-dark">
+        <i class="fab fa-facebook-f me-2"></i> Facebook
+      </a>
+    </li>
+    <li>
+      <a href="https://x.com/" class="text-decoration-none text-dark">
+        <i class="fab fa-twitter me-2"></i> Twitter
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/" class="text-decoration-none text-dark">
+        <i class="fab fa-instagram me-2"></i> Instagram
+      </a>
+    </li>
+    <li>
+      <a href="https://pk.linkedin.com/" class="text-decoration-none text-dark">
+        <i class="fab fa-linkedin-in me-2"></i> LinkedIn
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <hr>
+    <div class="text-center">
+      <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function filterSelection(category) {
+      let items = document.querySelectorAll('.filter-item');
+      let buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      if (category === 'all') {
+        items.forEach(item => item.style.display = 'block');
+        buttons[0].classList.add('active');
+      } else {
+        items.forEach(item => {
+          if (item.classList.contains(category)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        document.querySelector(`.filter-btn[onclick*="${category}"]`).classList.add('active');
+      }
+    }
+    filterSelection('all');
+  </script>
+</body>
+</html>
